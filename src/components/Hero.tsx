@@ -4,71 +4,46 @@ import { Play } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="inicio" className="bg-gradient-to-br from-green-600 to-green-800 text-white py-20">
+    <section id="inicio" className="bg-gradient-to-br from-[#8BC34A] via-[#7CB342] to-[#689F38] text-white py-16 min-h-screen flex items-center">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 animate-fade-in">
               Transforme a forma como sua empresa treina e contrata
             </h1>
-            <p className="text-xl mb-8 text-green-100">
+            <p className="text-xl md:text-2xl mb-12 text-green-100 max-w-4xl mx-auto leading-relaxed">
               Plataforma digital de treinamento corporativo personalizado com vídeos profissionais, 
               provas digitais e certificados automáticos.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
-                Solicitar Demonstração
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-600">
-                Como Funciona
-              </Button>
+          </div>
+
+          {/* Video Section - Centralizado */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
+              <div className="aspect-video bg-black rounded-2xl overflow-hidden relative">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ"
+                  title="Vídeo Demonstrativo Treinow"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <p className="text-center text-white mt-6 text-lg font-medium">
+                Veja como a Treinow funciona na prática
+              </p>
             </div>
           </div>
-          <div className="relative">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-              {/* Video Section */}
-              <div className="bg-black/20 rounded-xl p-8 mb-6 relative overflow-hidden">
-                <div className="aspect-video bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-lg flex items-center justify-center">
-                  <Button 
-                    size="lg" 
-                    className="bg-white/90 text-green-600 hover:bg-white rounded-full w-16 h-16 p-0"
-                    onClick={() => window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')}
-                  >
-                    <Play className="w-6 h-6 ml-1" />
-                  </Button>
-                </div>
-                <p className="text-center text-white/90 mt-4 font-medium">
-                  Veja como funciona na prática
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-xl p-6 mb-4">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center mr-3">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-green-600 font-semibold">Curso Personalizado</h3>
-                    <p className="text-gray-600 text-sm">Gravação profissional sob medida</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl p-6">
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mr-3">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-blue-600 font-semibold">Certificado Digital</h3>
-                    <p className="text-gray-600 text-sm">Emissão automática</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+          {/* CTA Button - Destaque */}
+          <div className="text-center">
+            <Button 
+              size="lg" 
+              className="bg-white text-[#8BC34A] hover:bg-gray-100 text-xl px-12 py-6 rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300 animate-pulse"
+            >
+              Solicitar Demonstração Gratuita
+            </Button>
           </div>
         </div>
       </div>

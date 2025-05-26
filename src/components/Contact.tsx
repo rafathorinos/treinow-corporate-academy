@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   return (
-    <section id="contato" className="py-20 bg-green-600 text-white">
+    <section id="contato" className="py-20 bg-[#8BC34A] text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -25,7 +25,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+          <Button size="lg" className="bg-white text-[#8BC34A] hover:bg-gray-100 text-xl px-12 py-6 rounded-full font-bold">
             Solicitar Demonstração Gratuita
           </Button>
         </div>

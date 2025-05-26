@@ -36,19 +36,19 @@ const Testimonials = () => {
           </p>
           
           {/* Video Section */}
-          <div className="max-w-2xl mx-auto mb-12">
-            <div className="bg-gradient-to-br from-green-100 to-blue-100 rounded-2xl p-8">
-              <div className="aspect-video bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-xl flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/10"></div>
-                <Button 
-                  size="lg" 
-                  className="bg-white/90 text-green-600 hover:bg-white rounded-full w-20 h-20 p-0 relative z-10 shadow-lg"
-                  onClick={() => window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')}
-                >
-                  <Play className="w-8 h-8 ml-1" />
-                </Button>
+          <div className="max-w-3xl mx-auto mb-12">
+            <div className="bg-gradient-to-br from-[#8BC34A]/10 to-[#689F38]/10 rounded-3xl p-8">
+              <div className="aspect-video bg-black rounded-2xl overflow-hidden relative">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/ScMzIvxBSi4"
+                  title="Depoimentos dos Clientes Treinow"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
-              <p className="text-center text-gray-700 mt-4 font-medium">
+              <p className="text-center text-gray-700 mt-6 font-medium text-lg">
                 Veja depoimentos reais dos nossos clientes
               </p>
             </div>
@@ -62,11 +62,11 @@ const Testimonials = () => {
                 <img 
                   src={testimonial.avatar} 
                   alt={testimonial.name}
-                  className="w-16 h-16 rounded-full object-cover mr-4 border-4 border-green-100"
+                  className="w-16 h-16 rounded-full object-cover mr-4 border-4 border-[#8BC34A]/20"
                 />
                 <div>
                   <h4 className="font-semibold text-gray-900 text-lg">{testimonial.name}</h4>
-                  <p className="text-green-600 font-medium">{testimonial.role}</p>
+                  <p className="text-[#8BC34A] font-medium">{testimonial.role}</p>
                 </div>
               </div>
               <blockquote className="text-gray-700 italic leading-relaxed">

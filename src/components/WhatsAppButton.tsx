@@ -20,7 +20,7 @@ const WhatsAppButton = () => {
       <div className="fixed bottom-6 right-6 z-50">
         <Button
           onClick={() => setIsPopupOpen(true)}
-          className="bg-green-500 hover:bg-green-600 text-white rounded-full w-16 h-16 p-0 shadow-lg animate-pulse"
+          className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full w-16 h-16 p-0 shadow-lg animate-pulse"
           size="lg"
         >
           <MessageCircle className="w-8 h-8" />
@@ -33,14 +33,14 @@ const WhatsAppButton = () => {
           <div className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl animate-scale-in">
             <div className="flex justify-between items-center mb-4">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-[#25D366] rounded-full flex items-center justify-center">
                   <MessageCircle className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Treinow</h3>
                   <div className="flex items-center space-x-1">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm text-green-600">Online agora</span>
+                    <div className="w-2 h-2 bg-[#25D366] rounded-full animate-pulse"></div>
+                    <span className="text-sm text-[#25D366]">Online agora</span>
                   </div>
                 </div>
               </div>
@@ -65,7 +65,7 @@ const WhatsAppButton = () => {
 
             <Button 
               onClick={handleWhatsAppClick}
-              className="w-full bg-green-500 hover:bg-green-600 text-white"
+              className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white"
             >
               <MessageCircle className="w-4 h-4 mr-2" />
               Iniciar Conversa
