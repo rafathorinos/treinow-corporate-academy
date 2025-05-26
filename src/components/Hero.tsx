@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Play } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -25,6 +26,22 @@ const Hero = () => {
           </div>
           <div className="relative">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+              {/* Video Section */}
+              <div className="bg-black/20 rounded-xl p-8 mb-6 relative overflow-hidden">
+                <div className="aspect-video bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-lg flex items-center justify-center">
+                  <Button 
+                    size="lg" 
+                    className="bg-white/90 text-green-600 hover:bg-white rounded-full w-16 h-16 p-0"
+                    onClick={() => window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')}
+                  >
+                    <Play className="w-6 h-6 ml-1" />
+                  </Button>
+                </div>
+                <p className="text-center text-white/90 mt-4 font-medium">
+                  Veja como funciona na prática
+                </p>
+              </div>
+              
               <div className="bg-white rounded-xl p-6 mb-4">
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center mr-3">

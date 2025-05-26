@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import TargetAudience from "@/components/TargetAudience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -23,6 +24,7 @@ const Index = () => {
       <TargetAudience />
       <Contact />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
