@@ -1,16 +1,10 @@
-
 const Footer = () => {
-  return (
-    <footer className="bg-gray-900 text-white py-12">
+  return <footer className="text-white py-12 bg-[#101610]">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <img 
-                src="/lovable-uploads/72a63317-c821-479b-8484-82da7766e195.png" 
-                alt="Treinow Logo" 
-                className="h-8 w-auto filter brightness-0 invert"
-              />
+              <img src="/lovable-uploads/72a63317-c821-479b-8484-82da7766e195.png" alt="Treinow Logo" className="h-8 w-auto filter brightness-0 invert" />
             </div>
             <p className="text-gray-400">
               Transformando a forma como empresas treinam e contratam através de tecnologia e inovação.
@@ -59,8 +53,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

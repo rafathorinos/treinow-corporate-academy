@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 const Contact = () => {
-  return <section id="contato" className="py-20 bg-[#8bc34a] text-white">
+  return <section id="contato" className="py-20 text-white bg-[#4b6249]">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
