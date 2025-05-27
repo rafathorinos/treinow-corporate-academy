@@ -36,7 +36,7 @@ const TargetAudience = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {audiences.map((audience, index) => <div key={index} className="bg-[#8bc34a]/10 backdrop-blur-sm p-8 rounded-2xl border border-[#8bc34a]/20 hover:bg-[#8bc34a]/20 transition-all duration-300 hover:scale-105">
+          {audiences.map((audience, index) => <div key={index} className="backdrop-blur-sm p-8 rounded-2xl border border-[#8bc34a]/20 transition-all duration-300 hover:scale-105 bg-[#0a1004]/10">
               <div className="text-5xl mb-6 text-center">{audience.icon}</div>
               <h3 className="text-xl font-semibold mb-4 text-center text-[#8bc34a]">{audience.title}</h3>
               <p className="text-gray-300 text-center leading-relaxed">{audience.description}</p>
