@@ -22,7 +22,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <Button size="lg" className="bg-white text-[#8bc34a] hover:bg-gray-100 text-xl px-12 py-6 rounded-full font-bold">
+          <Button size="lg" className="text-xl px-12 py-6 rounded-full font-bold bg-[#8bc34a] text-[#151a0f]">
             Solicitar Demonstração Gratuita
           </Button>
         </div>
