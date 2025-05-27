@@ -8,35 +8,35 @@ const HowItWorks = () => {
       title: "Envio de Materiais",
       description: "O cliente envia os padrões, missão e valores do processo logístico do seu negócio.",
       icon: FileText,
-      color: "from-[#4CAF50] to-[#66BB6A]"
+      color: "from-[#8bc34a] to-[#4b6249]"
     },
     {
       number: "2", 
       title: "Produção dos Vídeos",
       description: "A Treinow com base nisso produz, grava e edita um treinamento sob medida para sua empresa.",
       icon: Video,
-      color: "from-[#66BB6A] to-[#81C784]"
+      color: "from-[#8bc34a] to-[#4b6249]"
     },
     {
       number: "3",
       title: "Plataforma Personalizada", 
       description: "Criamos uma plataforma com a identidade visual personalizada da empresa.",
       icon: Palette,
-      color: "from-[#4CAF50] to-[#81C784]"
+      color: "from-[#8bc34a] to-[#4b6249]"
     },
     {
       number: "4",
       title: "Distribuição do Curso",
       description: "O RH recebe o link da plataforma da sua empresa e envia para candidatos e também para a equipe atual.",
       icon: Share2,
-      color: "from-[#66BB6A] to-[#4CAF50]"
+      color: "from-[#8bc34a] to-[#4b6249]"
     },
     {
       number: "5",
       title: "Acompanhamento",
       description: "A empresa acompanha tudo pelo painel admin: quem assistiu, quem concluiu, quem são os melhores, as estatísticas completas.",
       icon: BarChart3,
-      color: "from-[#81C784] to-[#4CAF50]"
+      color: "from-[#8bc34a] to-[#4b6249]"
     }
   ];
 
@@ -44,7 +44,7 @@ const HowItWorks = () => {
     <section id="como-funciona" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#000000] mb-4">
             Como funciona na prática
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -52,11 +52,11 @@ const HowItWorks = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-12">
+        <div className="max-w-3xl mx-auto space-y-8">
           {steps.map((step, index) => (
             <div key={index} className="flex flex-col items-center text-center">
-              <div className={`w-20 h-20 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center shadow-lg mb-6`}>
-                <span className="text-white text-2xl font-bold">{step.number}</span>
+              <div className={`w-12 h-12 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center shadow-lg mb-6`}>
+                <span className="text-white text-lg font-bold">{step.number}</span>
               </div>
               
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-2xl">
@@ -64,12 +64,12 @@ const HowItWorks = () => {
                   <step.icon className="w-8 h-8 text-white" />
                 </div>
                 
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{step.title}</h3>
+                <h3 className="text-2xl font-semibold text-[#000000] mb-4">{step.title}</h3>
                 <p className="text-gray-600 leading-relaxed text-lg">{step.description}</p>
               </div>
               
               {index < steps.length - 1 && (
-                <div className="w-1 h-12 bg-gradient-to-b from-gray-300 to-gray-400 mt-8"></div>
+                <div className="w-1 h-8 bg-gradient-to-b from-gray-300 to-gray-400 mt-6"></div>
               )}
             </div>
           ))}

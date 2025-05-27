@@ -1,17 +1,16 @@
 
 import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="inicio" className="bg-gradient-to-br from-[#4CAF50] via-[#66BB6A] to-[#81C784] text-white py-16 min-h-screen flex items-center">
+    <section id="inicio" className="bg-gradient-to-br from-[#8bc34a] via-[#8bc34a] to-[#4b6249] text-white py-16 min-h-screen flex items-center">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 animate-fade-in">
               Transforme a forma como sua empresa treina e contrata
             </h1>
-            <p className="text-xl md:text-2xl mb-12 text-green-100 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">
               Plataforma digital de treinamento corporativo personalizado com vídeos profissionais, 
               provas digitais e certificados automáticos.
             </p>
@@ -40,7 +39,7 @@ const Hero = () => {
           <div className="text-center">
             <Button 
               size="lg" 
-              className="bg-white text-[#4CAF50] hover:bg-gray-100 text-xl px-12 py-6 rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300 animate-[gentle-bounce_2s_ease-in-out_infinite]"
+              className="bg-white text-[#8bc34a] hover:bg-gray-100 text-xl px-12 py-6 rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300 animate-[gentle-bounce_2s_ease-in-out_infinite]"
             >
               Solicitar Demonstração Gratuita
             </Button>

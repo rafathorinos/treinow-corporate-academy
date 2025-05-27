@@ -1,5 +1,3 @@
-
-import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Testimonials = () => {
@@ -28,7 +26,7 @@ const Testimonials = () => {
     <section id="depoimentos" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#000000] mb-4">
             O que nossos clientes dizem
           </h2>
           <p className="text-xl text-gray-600 mb-8">
@@ -37,7 +35,7 @@ const Testimonials = () => {
           
           {/* Video Section */}
           <div className="max-w-3xl mx-auto mb-12">
-            <div className="bg-gradient-to-br from-[#8BC34A]/10 to-[#689F38]/10 rounded-3xl p-8">
+            <div className="bg-gradient-to-br from-[#8bc34a]/10 to-[#4b6249]/10 rounded-3xl p-8">
               <div className="aspect-video bg-black rounded-2xl overflow-hidden relative">
                 <iframe
                   className="w-full h-full"
@@ -57,16 +55,16 @@ const Testimonials = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+            <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#8bc34a]/10">
               <div className="flex items-center mb-6">
                 <img 
                   src={testimonial.avatar} 
                   alt={testimonial.name}
-                  className="w-16 h-16 rounded-full object-cover mr-4 border-4 border-[#8BC34A]/20"
+                  className="w-16 h-16 rounded-full object-cover mr-4 border-4 border-[#8bc34a]/20"
                 />
                 <div>
-                  <h4 className="font-semibold text-gray-900 text-lg">{testimonial.name}</h4>
-                  <p className="text-[#8BC34A] font-medium">{testimonial.role}</p>
+                  <h4 className="font-semibold text-[#000000] text-lg">{testimonial.name}</h4>
+                  <p className="text-[#8bc34a] font-medium">{testimonial.role}</p>
                 </div>
               </div>
               <blockquote className="text-gray-700 italic leading-relaxed">

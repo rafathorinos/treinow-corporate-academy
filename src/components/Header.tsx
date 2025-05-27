@@ -13,20 +13,20 @@ const Header = () => {
             <img 
               src="/lovable-uploads/72a63317-c821-479b-8484-82da7766e195.png" 
               alt="Treinow Logo" 
-              className="h-16 w-auto md:h-20"
+              className="h-20 w-auto md:h-24"
             />
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#inicio" className="text-gray-700 hover:text-[#8BC34A] transition-colors font-medium">Início</a>
-            <a href="#como-funciona" className="text-gray-700 hover:text-[#8BC34A] transition-colors font-medium">Como Funciona</a>
-            <a href="#beneficios" className="text-gray-700 hover:text-[#8BC34A] transition-colors font-medium">Benefícios</a>
-            <a href="#depoimentos" className="text-gray-700 hover:text-[#8BC34A] transition-colors font-medium">Depoimentos</a>
-            <a href="#contato" className="text-gray-700 hover:text-[#8BC34A] transition-colors font-medium">Contato</a>
+            <a href="#inicio" className="text-gray-700 hover:text-[#8bc34a] transition-colors font-medium">Início</a>
+            <a href="#como-funciona" className="text-gray-700 hover:text-[#8bc34a] transition-colors font-medium">Como Funciona</a>
+            <a href="#beneficios" className="text-gray-700 hover:text-[#8bc34a] transition-colors font-medium">Benefícios</a>
+            <a href="#depoimentos" className="text-gray-700 hover:text-[#8bc34a] transition-colors font-medium">Depoimentos</a>
+            <a href="#contato" className="text-gray-700 hover:text-[#8bc34a] transition-colors font-medium">Contato</a>
           </nav>
 
           <div className="hidden md:block">
-            <Button className="bg-[#8BC34A] hover:bg-[#7CB342] text-white animate-pulse">
+            <Button className="bg-[#8bc34a] hover:bg-[#4b6249] text-white">
               Solicitar Demonstração
             </Button>
           </div>
@@ -44,12 +44,12 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4">
             <nav className="flex flex-col space-y-4">
-              <a href="#inicio" className="text-gray-700 hover:text-[#8BC34A] transition-colors">Início</a>
-              <a href="#como-funciona" className="text-gray-700 hover:text-[#8BC34A] transition-colors">Como Funciona</a>
-              <a href="#beneficios" className="text-gray-700 hover:text-[#8BC34A] transition-colors">Benefícios</a>
-              <a href="#depoimentos" className="text-gray-700 hover:text-[#8BC34A] transition-colors">Depoimentos</a>
-              <a href="#contato" className="text-gray-700 hover:text-[#8BC34A] transition-colors">Contato</a>
-              <Button className="bg-[#8BC34A] hover:bg-[#7CB342] text-white w-full mt-4">
+              <a href="#inicio" className="text-gray-700 hover:text-[#8bc34a] transition-colors">Início</a>
+              <a href="#como-funciona" className="text-gray-700 hover:text-[#8bc34a] transition-colors">Como Funciona</a>
+              <a href="#beneficios" className="text-gray-700 hover:text-[#8bc34a] transition-colors">Benefícios</a>
+              <a href="#depoimentos" className="text-gray-700 hover:text-[#8bc34a] transition-colors">Depoimentos</a>
+              <a href="#contato" className="text-gray-700 hover:text-[#8bc34a] transition-colors">Contato</a>
+              <Button className="bg-[#8bc34a] hover:bg-[#4b6249] text-white w-full mt-4">
                 Solicitar Demonstração
               </Button>
             </nav>

@@ -34,23 +34,23 @@ const TargetAudience = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#8BC34A] to-[#689F38] text-white">
+    <section className="py-20 bg-[#000000] text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Para quem é ideal?
           </h2>
-          <p className="text-xl text-green-100">
+          <p className="text-xl text-gray-300">
             Empresas que se beneficiam da nossa solução
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {audiences.map((audience, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+            <div key={index} className="bg-[#8bc34a]/10 backdrop-blur-sm p-8 rounded-2xl border border-[#8bc34a]/20 hover:bg-[#8bc34a]/20 transition-all duration-300 hover:scale-105">
               <div className="text-5xl mb-6 text-center">{audience.icon}</div>
-              <h3 className="text-xl font-semibold mb-4 text-center">{audience.title}</h3>
-              <p className="text-green-100 text-center leading-relaxed">{audience.description}</p>
+              <h3 className="text-xl font-semibold mb-4 text-center text-[#8bc34a]">{audience.title}</h3>
+              <p className="text-gray-300 text-center leading-relaxed">{audience.description}</p>
             </div>
           ))}
         </div>

@@ -20,8 +20,8 @@ const Index = () => {
       <Features />
       <HowItWorks />
       <Benefits />
-      <TargetAudience />
       <Testimonials />
+      <TargetAudience />
       <Contact />
       <Footer />
       <WhatsAppButton />

@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   return (
-    <section id="contato" className="py-20 bg-[#4CAF50] text-white">
+    <section id="contato" className="py-20 bg-[#8bc34a] text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Pronto para transformar seu treinamento corporativo?
           </h2>
-          <p className="text-xl mb-12 text-green-100">
+          <p className="text-xl mb-12 text-white/90">
             Entre em contato conosco e descubra como a Treinow pode ajudar sua empresa 
             a contratar melhor e treinar com eficiência.
           </p>
@@ -25,7 +25,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <Button size="lg" className="bg-white text-[#4CAF50] hover:bg-gray-100 text-xl px-12 py-6 rounded-full font-bold">
+          <Button size="lg" className="bg-white text-[#8bc34a] hover:bg-gray-100 text-xl px-12 py-6 rounded-full font-bold">
             Solicitar Demonstração Gratuita
           </Button>
         </div>
