@@ -4,7 +4,7 @@ import { Play } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="inicio" className="bg-gradient-to-br from-[#8BC34A] via-[#7CB342] to-[#689F38] text-white py-16 min-h-screen flex items-center">
+    <section id="inicio" className="bg-gradient-to-br from-[#4CAF50] via-[#66BB6A] to-[#81C784] text-white py-16 min-h-screen flex items-center">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -36,11 +36,11 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* CTA Button - Destaque */}
+          {/* CTA Button - Movimento suave */}
           <div className="text-center">
             <Button 
               size="lg" 
-              className="bg-white text-[#8BC34A] hover:bg-gray-100 text-xl px-12 py-6 rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300 animate-pulse"
+              className="bg-white text-[#4CAF50] hover:bg-gray-100 text-xl px-12 py-6 rounded-full font-bold shadow-2xl hover:scale-105 transition-all duration-300 animate-[gentle-bounce_2s_ease-in-out_infinite]"
             >
               Solicitar Demonstração Gratuita
             </Button>

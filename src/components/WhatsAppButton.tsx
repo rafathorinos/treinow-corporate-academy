@@ -1,10 +1,21 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MessageCircle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WhatsAppButton = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setShowButton(scrollPosition > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleWhatsAppClick = () => {
     const phoneNumber = "5565930860011";
@@ -14,16 +25,18 @@ const WhatsAppButton = () => {
     setIsPopupOpen(false);
   };
 
+  if (!showButton) return null;
+
   return (
     <>
       {/* WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <Button
           onClick={() => setIsPopupOpen(true)}
-          className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full w-16 h-16 p-0 shadow-lg animate-pulse"
+          className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full w-20 h-20 p-0 shadow-lg animate-pulse"
           size="lg"
         >
-          <MessageCircle className="w-8 h-8" />
+          <MessageCircle className="w-10 h-10" />
         </Button>
       </div>
 

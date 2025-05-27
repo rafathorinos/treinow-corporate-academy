@@ -8,35 +8,35 @@ const HowItWorks = () => {
       title: "Envio de Materiais",
       description: "O cliente envia os padrões, missão e valores do processo logístico do seu negócio.",
       icon: FileText,
-      color: "from-[#8BC34A] to-[#7CB342]"
+      color: "from-[#4CAF50] to-[#66BB6A]"
     },
     {
       number: "2", 
       title: "Produção dos Vídeos",
       description: "A Treinow com base nisso produz, grava e edita um treinamento sob medida para sua empresa.",
       icon: Video,
-      color: "from-[#689F38] to-[#558B2F]"
+      color: "from-[#66BB6A] to-[#81C784]"
     },
     {
       number: "3",
       title: "Plataforma Personalizada", 
       description: "Criamos uma plataforma com a identidade visual personalizada da empresa.",
       icon: Palette,
-      color: "from-[#8BC34A] to-[#689F38]"
+      color: "from-[#4CAF50] to-[#81C784]"
     },
     {
       number: "4",
       title: "Distribuição do Curso",
       description: "O RH recebe o link da plataforma da sua empresa e envia para candidatos e também para a equipe atual.",
       icon: Share2,
-      color: "from-[#7CB342] to-[#558B2F]"
+      color: "from-[#66BB6A] to-[#4CAF50]"
     },
     {
       number: "5",
       title: "Acompanhamento",
       description: "A empresa acompanha tudo pelo painel admin: quem assistiu, quem concluiu, quem são os melhores, as estatísticas completas.",
       icon: BarChart3,
-      color: "from-[#689F38] to-[#8BC34A]"
+      color: "from-[#81C784] to-[#4CAF50]"
     }
   ];
 
@@ -52,28 +52,24 @@ const HowItWorks = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto space-y-12">
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col md:flex-row items-center mb-16 last:mb-0">
-              <div className="flex-shrink-0 mb-8 md:mb-0 md:mr-12">
-                <div className={`w-32 h-32 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center shadow-2xl`}>
-                  <span className="text-white text-4xl font-bold">{step.number}</span>
-                </div>
+            <div key={index} className="flex flex-col items-center text-center">
+              <div className={`w-20 h-20 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center shadow-lg mb-6`}>
+                <span className="text-white text-2xl font-bold">{step.number}</span>
               </div>
               
-              <div className="flex-1 text-center md:text-left">
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-lg flex items-center justify-center mb-6 mx-auto md:mx-0`}>
-                    <step.icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">{step.title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-lg">{step.description}</p>
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-2xl">
+                <div className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-lg flex items-center justify-center mb-6 mx-auto`}>
+                  <step.icon className="w-8 h-8 text-white" />
                 </div>
+                
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{step.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-lg">{step.description}</p>
               </div>
               
               {index < steps.length - 1 && (
-                <div className="hidden md:block w-full h-1 bg-gradient-to-r from-gray-300 to-gray-400 my-8 md:hidden"></div>
+                <div className="w-1 h-12 bg-gradient-to-b from-gray-300 to-gray-400 mt-8"></div>
               )}
             </div>
           ))}
