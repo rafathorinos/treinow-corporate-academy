@@ -54,38 +54,74 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Video Section - Redesigned */}
-          <div className="max-w-6xl mx-auto animate-fade-in" style={{animationDelay: '0.3s'}}>
+          {/* Video Section - Elegant Redesign */}
+          <div className="max-w-5xl mx-auto animate-fade-in" style={{animationDelay: '0.3s'}}>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Veja a <span className="text-gradient bg-gradient-to-r from-white to-green-100 bg-clip-text text-transparent">Transformação</span> em Ação
+              </h2>
+              <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+                Descubra como empresas líderes estão revolucionando seus processos de treinamento 
+                com nossa plataforma digital avançada
+              </p>
+            </div>
+            
             <div className="relative group">
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-white rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+              {/* Enhanced Glow Effects */}
+              <div className="absolute -inset-8 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-500"></div>
+              <div className="absolute -inset-4 bg-white/10 rounded-3xl blur-xl opacity-40 group-hover:opacity-60 transition-all duration-300"></div>
               
-              <div className="relative glass rounded-3xl p-8 hover-lift">
-                <div className="aspect-video bg-black rounded-2xl overflow-hidden relative shadow-strong">
-                  <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ"
-                    title="Vídeo Demonstrativo Treinow"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+              <div className="relative bg-white/5 backdrop-blur-xl rounded-3xl p-6 md:p-8 lg:p-12 border border-white/20 shadow-2xl hover-lift">
+                {/* Video Container */}
+                <div className="relative bg-black/50 rounded-2xl overflow-hidden shadow-2xl">
+                  <div className="aspect-video w-full">
+                    <iframe 
+                      src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7335771083968602112?compact=1" 
+                      className="w-full h-full rounded-2xl"
+                      frameBorder="0" 
+                      allowFullScreen 
+                      title="Treinow - Demonstração da Plataforma"
+                    />
+                  </div>
                   
-                  {/* Video overlay */}
-                  <div className="absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div className="bg-white/90 rounded-full p-4 shadow-lg">
-                      <Play className="w-8 h-8 text-primary" />
+                  {/* Elegant Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-all duration-300 rounded-2xl flex items-end justify-center p-8">
+                    <div className="text-center">
+                      <div className="bg-white/20 backdrop-blur-sm rounded-full p-3 mb-4 mx-auto w-fit">
+                        <Play className="w-6 h-6 text-white" />
+                      </div>
+                      <p className="text-white font-medium">Clique para ampliar</p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="mt-8 text-center">
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    Veja como a Treinow funciona na prática
-                  </h3>
-                  <p className="text-white/80 text-lg">
-                    Descubra como revolucionar o treinamento da sua empresa em apenas 2 minutos
-                  </p>
+                {/* Enhanced Description */}
+                <div className="mt-8 lg:mt-12 text-center">
+                  <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Sparkles className="w-6 h-6 text-white" />
+                      </div>
+                      <h4 className="text-white font-bold text-lg mb-2">Tecnologia Avançada</h4>
+                      <p className="text-white/80 text-sm">Plataforma intuitiva com IA integrada</p>
+                    </div>
+                    
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <ArrowRight className="w-6 h-6 text-white" />
+                      </div>
+                      <h4 className="text-white font-bold text-lg mb-2">Resultados Rápidos</h4>
+                      <p className="text-white/80 text-sm">Implementação em até 48 horas</p>
+                    </div>
+                    
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Play className="w-6 h-6 text-white" />
+                      </div>
+                      <h4 className="text-white font-bold text-lg mb-2">Suporte Premium</h4>
+                      <p className="text-white/80 text-sm">Atendimento especializado 24/7</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
