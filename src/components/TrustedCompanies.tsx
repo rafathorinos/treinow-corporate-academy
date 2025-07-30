@@ -1,23 +1,29 @@
 
 const TrustedCompanies = () => {
-  const companies = [
-    "Restaurante",
-    "Rede de Farmácias", 
-    "Escola",
-    "Mercado",
-    "Clínica"
+  const stats = [
+    { number: "500+", label: "Empresas" },
+    { number: "50K+", label: "Colaboradores" },
+    { number: "95%", label: "Aprovação" }
   ];
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-gray-600 font-semibold mb-8">
-          Empresas que confiam na Treinow:
-        </h2>
-        <div className="flex flex-wrap justify-center items-center gap-8">
-          {companies.map((company, index) => (
-            <div key={index} className="bg-white px-6 py-3 rounded-lg shadow-sm">
-              <span className="text-gray-700 font-medium">{company}</span>
+        <div className="text-center mb-12">
+          <p className="text-muted-foreground mb-8">
+            Confiado por empresas de todos os tamanhos
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-3 gap-8 max-w-4xl mx-auto">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
+                {stat.number}
+              </div>
+              <div className="text-muted-foreground font-medium">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>

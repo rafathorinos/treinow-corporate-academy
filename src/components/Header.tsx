@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,63 +8,66 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navItems = [
     { href: "#inicio", label: "Início" },
+    { href: "#recursos", label: "Recursos" },
     { href: "#como-funciona", label: "Como Funciona" },
     { href: "#beneficios", label: "Benefícios" },
-    { href: "#depoimentos", label: "Depoimentos" },
     { href: "#contato", label: "Contato" }
   ];
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-soft' : 'bg-transparent'
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2 animate-fade-in-left">
-            <img 
-              src="/lovable-uploads/72a63317-c821-479b-8484-82da7766e195.png" 
-              alt="Treinow Logo" 
-              className="h-16 w-auto md:h-20 hover:scale-105 transition-transform"
-            />
+          <div className="flex items-center">
+            <div className={`text-2xl font-bold transition-all duration-300 ${
+              isScrolled ? 'text-foreground' : 'text-white'
+            }`}>
+              Treinow
+            </div>
           </div>
-          
+
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8 animate-fade-in">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a 
+              <a
                 key={item.href}
-                href={item.href} 
-                className={`font-medium transition-colors duration-200 hover:text-primary relative group ${
+                href={item.href}
+                className={`font-medium transition-colors hover:text-primary ${
                   isScrolled ? 'text-foreground' : 'text-white'
                 }`}
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block animate-fade-in-right">
-            <Button className="bg-primary hover:bg-secondary text-white font-medium px-6 py-3 rounded-full shadow-medium hover-lift group">
-              Solicitar Demonstração
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          {/* Desktop CTA */}
+          <div className="hidden lg:block">
+            <Button 
+              className={`font-bold transition-all ${
+                isScrolled 
+                  ? 'bg-primary text-white hover:bg-primary/90' 
+                  : 'bg-white text-secondary hover:bg-white/90'
+              }`}
+            >
+              Demonstração Gratuita
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button 
-            className="lg:hidden p-2 rounded-lg hover:bg-black/10 transition-colors"
+          {/* Mobile menu button */}
+          <button
+            className="lg:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -78,22 +80,23 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-strong rounded-b-2xl animate-scale-in">
-            <nav className="flex flex-col p-6 space-y-4">
+          <div className="lg:hidden py-4 bg-white/95 backdrop-blur-md rounded-b-lg shadow-lg">
+            <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a 
+                <a
                   key={item.href}
-                  href={item.href} 
-                  className="text-foreground hover:text-primary transition-colors font-medium py-2 border-b border-border/20 last:border-0"
+                  href={item.href}
+                  className="px-4 py-2 text-foreground font-medium hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <Button className="bg-primary hover:bg-secondary text-white font-medium mt-4 rounded-full group">
-                Solicitar Demonstração
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <div className="px-4 pt-2">
+                <Button className="w-full bg-primary text-white hover:bg-primary/90 font-bold">
+                  Demonstração Gratuita
+                </Button>
+              </div>
             </nav>
           </div>
         )}
