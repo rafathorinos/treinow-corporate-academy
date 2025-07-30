@@ -21,7 +21,7 @@ const Hero = () => {
           {/* Logo Section */}
           <div className="text-center mb-12 animate-fade-in-luxury">
             
-            <div className="inline-flex items-center gap-3 glass-ultra rounded-full px-8 py-4 mb-8">
+            <div className="inline-flex items-center gap-3 glass-ultra py-4 mb-8 mx-[7px] px-[33px] my-0 rounded-lg">
               <Sparkles className="w-6 h-6 text-primary animate-pulse" />
               <span className="text-white font-semibold text-lg">Revolução Digital Corporativa</span>
             </div>
