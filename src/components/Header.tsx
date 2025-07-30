@@ -23,28 +23,40 @@ const Header = () => {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled 
+        ? 'bg-white/90 backdrop-blur-xl shadow-2xl' 
+        : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <div className={`text-2xl font-bold transition-all duration-300 ${
-              isScrolled ? 'text-foreground' : 'text-white'
-            }`}>
-              Treinow
-            </div>
+            {isScrolled ? (
+              <img 
+                src="/lovable-uploads/aa322d61-353c-4c8e-9d87-1e50b7ce953f.png" 
+                alt="Treinow" 
+                className="h-8 transition-all duration-300"
+              />
+            ) : (
+              <img 
+                src="/lovable-uploads/aa322d61-353c-4c8e-9d87-1e50b7ce953f.png" 
+                alt="Treinow" 
+                className="h-10 brightness-0 invert transition-all duration-300"
+              />
+            )}
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-10">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className={`font-medium transition-colors hover:text-primary ${
-                  isScrolled ? 'text-foreground' : 'text-white'
+                className={`font-semibold transition-all duration-300 hover:scale-105 ${
+                  isScrolled 
+                    ? 'text-gray-800 hover:text-primary' 
+                    : 'text-white hover:text-primary'
                 }`}
               >
                 {item.label}
@@ -55,46 +67,46 @@ const Header = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:block">
             <Button 
-              className={`font-bold transition-all ${
+              className={`font-bold transition-all duration-300 hover:scale-105 ${
                 isScrolled 
-                  ? 'bg-primary text-white hover:bg-primary/90' 
-                  : 'bg-white text-secondary hover:bg-white/90'
+                  ? 'btn-luxury text-white' 
+                  : 'btn-outline-luxury text-white'
               }`}
             >
-              Demonstração Gratuita
+              Demo Gratuita
             </Button>
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-3 rounded-xl glass-ultra"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-white'}`} />
+              <X className={`w-6 h-6 ${isScrolled ? 'text-gray-800' : 'text-white'}`} />
             ) : (
-              <Menu className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-white'}`} />
+              <Menu className={`w-6 h-6 ${isScrolled ? 'text-gray-800' : 'text-white'}`} />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 bg-white/95 backdrop-blur-md rounded-b-lg shadow-lg">
-            <nav className="flex flex-col space-y-4">
+          <div className="lg:hidden py-6 glass-ultra rounded-b-2xl shadow-2xl animate-slide-up-elegant">
+            <nav className="flex flex-col space-y-6">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="px-4 py-2 text-foreground font-medium hover:text-primary transition-colors"
+                  className="px-6 py-3 text-gray-800 font-semibold hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <div className="px-4 pt-2">
-                <Button className="w-full bg-primary text-white hover:bg-primary/90 font-bold">
-                  Demonstração Gratuita
+              <div className="px-6 pt-4">
+                <Button className="w-full btn-luxury text-white font-bold">
+                  Demo Gratuita
                 </Button>
               </div>
             </nav>
