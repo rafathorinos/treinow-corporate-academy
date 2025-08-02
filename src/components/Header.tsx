@@ -25,37 +25,39 @@ const Header = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'bg-white/90 backdrop-blur-xl shadow-2xl' 
+        ? 'bg-white/95 backdrop-blur-xl shadow-lg' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
             {isScrolled ? (
+              <div className="bg-foreground p-2 rounded-lg">
+                <img 
+                  src="/lovable-uploads/aa322d61-353c-4c8e-9d87-1e50b7ce953f.png" 
+                  alt="Treinow" 
+                  className="h-6 transition-all duration-300"
+                />
+              </div>
+            ) : (
               <img 
                 src="/lovable-uploads/aa322d61-353c-4c8e-9d87-1e50b7ce953f.png" 
                 alt="Treinow" 
                 className="h-8 transition-all duration-300"
               />
-            ) : (
-              <img 
-                src="/lovable-uploads/aa322d61-353c-4c8e-9d87-1e50b7ce953f.png" 
-                alt="Treinow" 
-                className="h-10 brightness-0 invert transition-all duration-300"
-              />
             )}
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-10">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className={`font-semibold transition-all duration-300 hover:scale-105 ${
+                className={`font-medium transition-all duration-300 hover:scale-105 text-sm ${
                   isScrolled 
-                    ? 'text-gray-800 hover:text-primary' 
+                    ? 'text-foreground hover:text-primary' 
                     : 'text-white hover:text-primary'
                 }`}
               >
@@ -67,6 +69,7 @@ const Header = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:block">
             <Button 
+              size="sm"
               className={`font-bold transition-all duration-300 hover:scale-105 ${
                 isScrolled 
                   ? 'btn-luxury text-white' 

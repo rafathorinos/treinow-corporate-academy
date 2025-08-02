@@ -5,49 +5,49 @@
 
 @layer base {
   :root {
-    /* Ultra-modern color palette */
-    --background: 0 0% 98%;
-    --foreground: 0 0% 8%;
+    /* Clean color palette */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
     
     /* Primary brand colors */
     --primary: 88 50% 53%; /* #8bc34a */
     --primary-foreground: 0 0% 100%;
     --primary-dark: 88 28% 34%; /* #4b6249 */
     
-    /* Sophisticated neutrals */
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 9% 46%;
+    /* Clean neutrals */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 20%;
     
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
     
     --accent: 88 50% 53%;
     --accent-foreground: 0 0% 100%;
     
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 8%;
+    --card-foreground: 0 0% 10%;
     
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
     --ring: 88 50% 53%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
+    --popover-foreground: 0 0% 10%;
     
-    /* Ultra-modern gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(88 28% 34%) 0%, hsl(88 50% 53%) 50%, hsl(88 60% 63%) 100%);
-    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
-    --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 100%);
+    /* Modern gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 30% 10%) 0%, hsl(220 30% 15%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+    --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 100%);
     
-    /* Sophisticated shadows */
-    --shadow-ultra: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    --shadow-glow: 0 0 40px rgba(139, 195, 74, 0.3);
-    --shadow-float: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    /* Clean shadows */
+    --shadow-ultra: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+    --shadow-glow: 0 0 30px rgba(139, 195, 74, 0.2);
+    --shadow-float: 0 10px 20px -5px rgba(0, 0, 0, 0.08), 0 4px 8px -2px rgba(0, 0, 0, 0.04);
     
-    --radius: 1rem;
+    --radius: 0.75rem;
   }
 
   .dark {

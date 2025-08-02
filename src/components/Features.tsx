@@ -42,69 +42,39 @@ const Features = () => {
   ];
 
   return (
-    <section id="recursos" className="py-32 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 bg-pattern-grid opacity-30"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20 animate-fade-in-luxury">
-          <div className="inline-flex items-center gap-3 glass-card rounded-full px-8 py-4 mb-8">
-            <Sparkles className="w-6 h-6 text-primary" />
-            <span className="text-gray-700 font-semibold">Tecnologia de Ponta</span>
-          </div>
-          
-          <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">
-            Recursos <span className="gradient-text-luxury">Revolucionários</span>
-          </h2>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Plataforma com tecnologias disruptivas que redefinem o futuro do treinamento corporativo
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {features.map((feature, index) => (
-            <Card 
-              key={index} 
-              className="hover-float border-0 shadow-2xl bg-white/80 backdrop-blur-xl overflow-hidden group animate-slide-up-elegant"
-              style={{animationDelay: `${index * 0.1}s`}}
-            >
-              <CardContent className="p-8 relative">
-                {/* Gradient background */}
-                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${feature.gradient} rounded-full opacity-10 -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700`}></div>
-                
-                {/* Icon */}
-                <div className={`w-20 h-20 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-xl`}>
-                  <feature.icon className="w-10 h-10 text-white" />
-                </div>
-                
-                {/* Content */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed text-lg">
-                  {feature.description}
-                </p>
-
-                {/* Hover effect */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary-dark transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-20 animate-fade-in-luxury" style={{animationDelay: '0.8s'}}>
-          <div className="glass-card rounded-3xl p-12 max-w-4xl mx-auto">
-            <Zap className="w-16 h-16 text-primary mx-auto mb-6 animate-glow-pulse" />
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Pronto para a <span className="gradient-text-luxury">Revolução Digital?</span>
-            </h3>
-            <p className="text-xl text-gray-600 mb-8">
-              Descubra como nossa plataforma pode transformar completamente seus processos
+    <section id="recursos" className="py-16 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12 animate-fade-in-luxury">
+            <div className="inline-flex items-center gap-2 glass-card rounded-full px-6 py-2 mb-6">
+              <Sparkles className="w-4 h-4 text-primary" />
+              <span className="text-foreground font-medium text-sm">Soluções Digitais</span>
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              O Que Eu Ofereço
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Soluções digitais que simplificam treinamentos corporativos
             </p>
-            <button className="btn-luxury text-white font-bold px-10 py-4 rounded-full text-lg hover:scale-105 transition-transform">
-              Explorar Todos os Recursos
-            </button>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, index) => (
+              <Card key={index} className="glass-card border-0 hover-float">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <feature.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-bold text-card-foreground mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>

@@ -31,42 +31,41 @@ const Benefits = () => {
   ];
 
   return (
-    <section id="beneficios" className="py-20 bg-background">
+    <section id="beneficios" className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            <span className="gradient-text">Benefícios</span> Comprovados
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Resultados reais que transformam empresas
-          </p>
-        </div>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Benefícios
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Como a Treinow melhora seus treinamentos
+            </p>
+          </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {benefits.map((benefit, index) => (
-            <Card 
-              key={index} 
-              className="hover-lift border-border/50 hover:shadow-lg transition-all duration-300 text-center"
-            >
-              <CardContent className="p-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-primary" />
-                </div>
-                
-                <div className="text-3xl font-bold text-primary mb-2">
-                  {benefit.metric}
-                </div>
-                
-                <h3 className="text-lg font-bold text-foreground mb-2">
-                  {benefit.title}
-                </h3>
-                
-                <p className="text-muted-foreground text-sm">
-                  {benefit.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <Card key={index} className="glass-card border-0 hover-float group text-center">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <benefit.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  
+                  <div className="text-xl font-bold text-primary mb-2">
+                    {benefit.metric}
+                  </div>
+                  
+                  <h3 className="text-lg font-bold text-card-foreground mb-3">
+                    {benefit.title}
+                  </h3>
+                  
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>
